@@ -1,14 +1,11 @@
 import java.util.Scanner;
 
 public class Menu {
-    private Scanner scanner;
     private TesterEntrees tester;
     private boolean continuer = true;
 
     public Menu() {
-        scanner = new Scanner(System.in);
         tester = new TesterEntrees(new Grille());
-
     }
 
     public int afficherMenuPrincipal() {
