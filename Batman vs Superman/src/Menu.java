@@ -22,20 +22,18 @@ public class Menu {
     public void start() {
         while (continuer) {
             int choix = afficherMenuPrincipal();
-            switch (choix) {
-                case 1:
-                    launchGame(false);
-                    break;
-                case 2:
-                    launchGame(true);
-                    break;
-                case 3:
-                    continuer = false;
-                    System.out.println("Au revoir !");
-                    break;
-                default:
-                    System.out.println("Choix invalide, veuillez réessayer.");
+            if (choix < 1 || choix > 3) {
+                System.out.println("Choix invalide, veuillez réassayer");
+                continue;
             }
+
+            if (choix == 3) {
+                continuer = false;
+                System.out.println("Au revoir");
+                return;
+            }
+            
+            launchGame(choix != 1);
         }
     }
 
