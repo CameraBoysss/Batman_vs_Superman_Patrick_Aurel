@@ -24,12 +24,10 @@ public class Menu {
             int choix = afficherMenuPrincipal();
             switch (choix) {
                 case 1:
-                    Game jeu = new Game(false);
-                    jeu.jouer();
+                    launchGame(false);
                     break;
                 case 2:
-                    Game jeuIA = new Game(true);
-                    jeuIA.jouer();
+                    launchGame(true);
                     break;
                 case 3:
                     continuer = false;
@@ -39,5 +37,10 @@ public class Menu {
                     System.out.println("Choix invalide, veuillez réessayer.");
             }
         }
+    }
+
+    public void launchGame(boolean modeAI) {
+        Game game = new Game(modeAI);
+        game.jouer();
     }
 }
