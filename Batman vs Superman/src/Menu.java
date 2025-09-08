@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Menu {
     private TesterEntrees tester;
     private boolean continuer = true;
@@ -19,8 +17,8 @@ public class Menu {
         System.out.println("Votre choix : ");
 
         return tester.choixMenuPrincipal();
-
     }
+
     public void start() {
         while (continuer) {
             int choix = afficherMenuPrincipal();
@@ -43,5 +41,3 @@ public class Menu {
         }
     }
 }
-
-
