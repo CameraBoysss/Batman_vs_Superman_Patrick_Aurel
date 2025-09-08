@@ -17,13 +17,7 @@ public class Game {
     }
 
     private void choisirPersonnage() {
-        System.out.println("╔════════════════════════════╗");
-        System.out.println("║    CHOISISSEZ VOTRE HÉROS  ║");
-        System.out.println("╠════════════════════════════╣");
-        System.out.println("║ 1. Batman                  ║");
-        System.out.println("║ 2. Superman                ║");
-        System.out.println("╚════════════════════════════╝");
-
+        Terminal.displayCaracterChoice();
         int choix = tester.choixPersonnage();
 
         if (choix == 1) {

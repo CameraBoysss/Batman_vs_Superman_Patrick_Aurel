@@ -7,13 +7,7 @@ public class Menu {
     }
 
     public int afficherMenuPrincipal() {
-        System.out.println("╔════════════════════════════╗");
-        System.out.println("║      SUPER TIC-TAC-TOE     ║");
-        System.out.println("╠════════════════════════════╣");
-        System.out.println("║ 1. Joueur contre Joueur    ║");
-        System.out.println("║ 2. Joueur contre IA        ║");
-        System.out.println("║ 3. Quitter                 ║");
-        System.out.println("╚════════════════════════════╝");
+        Terminal.displayMainMenu();
         System.out.println("Votre choix : ");
 
         return tester.choixMenuPrincipal();
@@ -32,7 +26,7 @@ public class Menu {
                 System.out.println("Au revoir");
                 return;
             }
-            
+
             launchGame(choix != 1);
         }
     }
