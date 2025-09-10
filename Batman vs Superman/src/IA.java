@@ -13,7 +13,7 @@ public class IA {
                 return coupGagnant;
             }
 
-            int[] coupBloquant = rechercherCoupBloquant();
+            int[] coupBloquant = rechercherCoupPotentiel(lettreIA == 'S' ? 'B' : 'S');
             if (coupBloquant != null) {
                 return coupBloquant;
             }
@@ -24,16 +24,6 @@ public class IA {
         private int[] rechercherCoupGagnant() {
 
             return rechercherCoupPotentiel(lettreIA);
-        }
-
-        private int[] rechercherCoupBloquant() {
-            char lettreAdversaire;
-            if (lettreIA == 'S') {
-                lettreAdversaire = 'B';
-            } else {
-                lettreAdversaire = 'S';
-            }
-            return rechercherCoupPotentiel(lettreAdversaire);
         }
 
         private int[] rechercherCoupPotentiel(char lettre) {
