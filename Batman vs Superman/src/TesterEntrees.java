@@ -14,38 +14,23 @@ public class TesterEntrees {
     public void validerRemplissageLigne(){
 
         System.out.println("Veillez entrer le numéro de la ligne");
-        while(!sc.hasNextInt()){
-            System.out.println("Veillez entrer un nombre");
-            sc.nextLine();
-        }
-        grille.setNumeroLigne(sc.nextInt());
+        grille.setNumeroLigne(readInt());
         while (grille.getNumeroLigne() < 0 || grille.getNumeroLigne() > 3) {
             System.out.println("Veillez entrer un numéro de ligne correct entre 0 et 3");
             sc.nextLine();
-            while(!sc.hasNextInt()){
-                System.out.println("Veillez entrer un nombre");
-                sc.nextLine();
-            }
-            grille.setNumeroLigne(sc.nextInt());
+
+            grille.setNumeroLigne(readInt());
         }
     }
 
     public void validerRemplissageColonne(){
         grille.getNumeroColonne();
         System.out.println("Veillez entrer le numéro de la colonne");
-        while(!sc.hasNextInt()){
-            System.out.println("Veillez entrer un nombre");
-            sc.nextLine();
-        }
-        grille.setNumeroColonne(sc.nextInt());
+        grille.setNumeroColonne(readInt());
         while (grille.getNumeroColonne() < 0 || grille.getNumeroLigne() > 3) {
             System.out.println("Veillez entrer un numéro de ligne correct entre 0 et 3");
             sc.nextLine();
-            while(!sc.hasNextInt()){
-                System.out.println("Veillez entrer un nombre");
-                sc.nextLine();
-            }
-            grille.setNumeroColonne(sc.nextInt());
+            grille.setNumeroColonne(readInt());
         }
     }
 
@@ -110,10 +95,18 @@ public class TesterEntrees {
                 System.out.println("Veuillez choisir une case occupée par Superman s'il vous plaît.");
             } else {
                 ligneSelectionnee = grille.getNumeroLigne();
-                colonneSelectionnee = grille.getNumeroColonne();
+                 colonneSelectionnee = grille.getNumeroColonne();
                 return;
             }
         } while (grille.getGrille()[grille.getNumeroLigne()][grille.getNumeroColonne()] != 'S');
+    }
+
+    private int readInt() {
+        while(!sc.hasNextInt()){
+            System.out.println("Veillez entrer un nombre");
+            sc.nextLine();
+        }
+        return sc.nextInt();
     }
 
     public int getLigneSelectionnee() {
