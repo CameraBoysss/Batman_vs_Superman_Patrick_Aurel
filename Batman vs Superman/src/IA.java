@@ -24,8 +24,20 @@ public class IA {
         }
 
         private int[] rechercherCoupPotentiel(char lettre) {
-            char[][] grilleActuelle = grille.getGrille();
+            int[] winningHorizontalCell = findWinningHorizontalCell(lettreIA);
+            if(winningHorizontalCell != null) {
+                return winningHorizontalCell;
+            }
 
+            int[] winningVerticalCell = findWinningVerticalCell(lettreIA);
+            if(winningVerticalCell != null) {
+                return winningVerticalCell;
+            }
+            return null;
+        }
+
+        private int[] findWinningVerticalCell(char lettre) {
+            char[][] grilleActuelle = grille.getGrille();
             for (int i = 0; i < 4; i++) {
                 int compteur = 0;
                 int colonneVide = -1;
@@ -40,7 +52,11 @@ public class IA {
                     return new int[]{i, colonneVide};
                 }
             }
+            return null;
+        }
 
+        private int[] findWinningHorizontalCell(char lettre) {
+            char[][] grilleActuelle = grille.getGrille();
             for (int j = 0; j < 4; j++) {
                 int compteur = 0;
                 int ligneVide = -1;
