@@ -10,7 +10,7 @@ public class Menu {
         while (continuer) {
             Terminal.displayMainMenu();
             System.out.println("Votre choix: ");
-            int choix = IntReader.readIntBetween(1, 3);
+            int choix = IntReader.read(1, 3);
 
             if (choix == 3) {
                 continuer = false;

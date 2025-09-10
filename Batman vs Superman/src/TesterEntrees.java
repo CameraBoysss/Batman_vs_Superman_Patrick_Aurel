@@ -14,23 +14,23 @@ public class TesterEntrees {
     public void validerRemplissageLigne(){
 
         System.out.println("Veillez entrer le numéro de la ligne");
-        grille.setNumeroLigne(IntReader.readInt());
+        grille.setNumeroLigne(IntReader.read());
         while (grille.getNumeroLigne() < 0 || grille.getNumeroLigne() > 3) {
             System.out.println("Veillez entrer un numéro de ligne correct entre 0 et 3");
             sc.nextLine();
 
-            grille.setNumeroLigne(IntReader.readInt());
+            grille.setNumeroLigne(IntReader.read());
         }
     }
 
     public void validerRemplissageColonne(){
         grille.getNumeroColonne();
         System.out.println("Veillez entrer le numéro de la colonne");
-        grille.setNumeroColonne(IntReader.readInt());
+        grille.setNumeroColonne(IntReader.read());
         while (grille.getNumeroColonne() < 0 || grille.getNumeroLigne() > 3) {
             System.out.println("Veillez entrer un numéro de ligne correct entre 0 et 3");
             sc.nextLine();
-            grille.setNumeroColonne(IntReader.readInt());
+            grille.setNumeroColonne(IntReader.read());
         }
     }
 
