@@ -12,17 +12,14 @@ public class IA {
             if (coupGagnant != null) {
                 return coupGagnant;
             }
-
             int[] coupBloquant = rechercherCoupPotentiel(lettreIA == 'S' ? 'B' : 'S');
             if (coupBloquant != null) {
                 return coupBloquant;
             }
-
             return jouerCoupStrategique();
         }
 
         private int[] rechercherCoupGagnant() {
-
             return rechercherCoupPotentiel(lettreIA);
         }
 
@@ -58,7 +55,6 @@ public class IA {
                     return new int[]{ligneVide, j};
                 }
             }
-
             return null;
         }
 
@@ -70,7 +66,6 @@ public class IA {
             if (grilleActuelle[2][1] == ' ') return new int[]{2, 1};
             if (grilleActuelle[2][2] == ' ') return new int[]{2, 2};
 
-
             for (int i = 0; i < 4; i++) {
                 for (int j = 0; j < 4; j++) {
                     if (grilleActuelle[i][j] == ' ') {
@@ -78,9 +73,6 @@ public class IA {
                     }
                 }
             }
-
             return null;
         }
-
-
 }
