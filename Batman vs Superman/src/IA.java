@@ -12,6 +12,7 @@ public class IA {
             if (coupGagnant != null) {
                 return coupGagnant;
             }
+
             int[] coupBloquant = rechercherCoupPotentiel(lettreIA == 'S' ? 'B' : 'S');
             if (coupBloquant != null) {
                 return coupBloquant;
