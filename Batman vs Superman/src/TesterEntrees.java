@@ -56,28 +56,6 @@ public class TesterEntrees {
 
     }
 
-    public int choixPersonnage() {
-        Scanner scanner = new Scanner(System.in);
-        int choix = 0;
-        boolean choixValide = false;
-
-        while (!choixValide) {
-            System.out.print("Votre choix (1 ou 2): ");
-            try {
-                choix = Integer.parseInt(scanner.nextLine());
-                if (choix == 1 || choix == 2) {
-                    choixValide = true;
-                } else {
-                    System.out.println("Veuillez entrer 1 pour Batman ou 2 pour Superman.");
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Veuillez entrer un nombre valide.");
-            }
-        }
-
-        return choix;
-    }
-
     public void validerPositionTactician() {
         do {
             validerRemplissageLigne();
