@@ -92,8 +92,8 @@ public class Grille {
     }
 
     public void remplirGrilleHeatVision() {
-        if (numeroLigne >= 0 && numeroLigne < 4 && numeroColonne >= 0
-                && numeroColonne < 4 && grille[numeroLigne][numeroColonne] == 'B') {
+        if (numeroLigne >= 0 && numeroLigne < 4 &&
+                numeroColonne >= 0 && numeroColonne < 4 ) {
             grille[numeroLigne][numeroColonne] = ' ';
         }
     }
