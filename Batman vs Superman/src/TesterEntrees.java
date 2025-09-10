@@ -14,23 +14,23 @@ public class TesterEntrees {
     public void validerRemplissageLigne(){
 
         System.out.println("Veillez entrer le numéro de la ligne");
-        grille.setNumeroLigne(readInt());
+        grille.setNumeroLigne(IntReader.readInt());
         while (grille.getNumeroLigne() < 0 || grille.getNumeroLigne() > 3) {
             System.out.println("Veillez entrer un numéro de ligne correct entre 0 et 3");
             sc.nextLine();
 
-            grille.setNumeroLigne(readInt());
+            grille.setNumeroLigne(IntReader.readInt());
         }
     }
 
     public void validerRemplissageColonne(){
         grille.getNumeroColonne();
         System.out.println("Veillez entrer le numéro de la colonne");
-        grille.setNumeroColonne(readInt());
+        grille.setNumeroColonne(IntReader.readInt());
         while (grille.getNumeroColonne() < 0 || grille.getNumeroLigne() > 3) {
             System.out.println("Veillez entrer un numéro de ligne correct entre 0 et 3");
             sc.nextLine();
-            grille.setNumeroColonne(readInt());
+            grille.setNumeroColonne(IntReader.readInt());
         }
     }
 
@@ -56,15 +56,6 @@ public class TesterEntrees {
 
     }
 
-    public int choixMenuPrincipal () {
-        int choix;
-        while (!sc.hasNextInt()) {
-            System.out.println("Veillez entrer un nombre svp");
-            sc.nextLine();
-        }
-        choix = sc.nextInt();
-        return choix;
-    }
     public int choixPersonnage() {
         Scanner scanner = new Scanner(System.in);
         int choix = 0;
@@ -101,13 +92,7 @@ public class TesterEntrees {
         } while (grille.getGrille()[grille.getNumeroLigne()][grille.getNumeroColonne()] != 'S');
     }
 
-    private int readInt() {
-        while(!sc.hasNextInt()){
-            System.out.println("Veillez entrer un nombre");
-            sc.nextLine();
-        }
-        return sc.nextInt();
-    }
+
 
     public int getLigneSelectionnee() {
         return ligneSelectionnee;

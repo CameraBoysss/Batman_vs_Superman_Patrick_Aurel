@@ -18,7 +18,7 @@ public class Game {
 
     private void choisirPersonnage() {
         Terminal.displayCaracterChoice();
-        int choix = tester.choixPersonnage();
+        int choix = IntReader.readIntBetween(1, 2);
 
         if (choix == 1) {
             joueur1 = new Joueur("Batman", 'B');
@@ -65,7 +65,7 @@ public class Game {
                     }
                 }
 
-                choix = tester.choixMenuPrincipal();
+                choix = IntReader.readIntBetween(1, 3);
 
                 if ((choix == 2 && joueurActuel.isCompetence1Utilisee()) ||
                         (choix == 3 && joueurActuel.isCompetence2Utilisee())) {
