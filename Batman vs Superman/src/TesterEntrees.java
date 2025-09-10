@@ -70,8 +70,6 @@ public class TesterEntrees {
         } while (grille.getGrille()[grille.getNumeroLigne()][grille.getNumeroColonne()] != 'S');
     }
 
-
-
     public int getLigneSelectionnee() {
         return ligneSelectionnee;
     }
